@@ -21,7 +21,7 @@ let problems = [15];
 const questions = () =>{
     let test = 0;
     const photos = ["d1.jpg","d2.jpg","d3.jpg"];
-    let index = Math.floor(Math.random() * 3);
+    let index = Math.floor(Math.random() * 10);
     document.getElementById("Test").innerHTML=`${index}`;
         for(let i = 0; i< problems.length; i++){
         if(problems[i] === index){
@@ -39,7 +39,27 @@ const questions = () =>{
             else if(index === 2){
                 question3();
             }
-
+            else if(index === 3){
+                question4();
+            }
+            else if(index === 4){
+                question5();
+            }
+            else if(index === 5){
+                question6();
+            }    
+            else if(index === 6){
+                question7();
+            }
+            else if(index === 7){
+                question8();
+            }
+            else if(index === 8){
+                question9();
+            }
+            else if(index === 9){
+                question10();
+            }
             else{
                 document.getElementById("question").innerHTML=`NUMBER ISN"T HERE :(`;   
             }
@@ -68,6 +88,7 @@ else{
 document.getElementById("Test2").innerHTML = `IS Wrong`;
 }
 }
+
 
 const checkQuestion = (num) =>{
     // Determine if the user is correct
@@ -100,7 +121,7 @@ if(num === 1){
 
 //Question 1 Function
 const question1 = () => {
-    document.getElementById("question").innerHTML=`<img src="d1.jpg"> <br> 
+    document.getElementById("question").innerHTML=`<img src="photo1.JPG"> <br> 
     <p> Who is on the Right</p>
     <form>
         
@@ -130,7 +151,7 @@ const question1 = () => {
 
 //Question 2 Function
 const question2 = () => {
-    document.getElementById("question").innerHTML=`<img src="d2.jpg"> <br> 
+    document.getElementById("question").innerHTML=`<img src="photo2.JPG"> <br> 
     <p> Who is on the Right</p>
     <form>
         
@@ -158,9 +179,219 @@ const question2 = () => {
     <button onclick="checkQuestion(1)">Submit</button>`;
 }
 
-//Question 2 Function
+//Question 3 Function
 const question3 = () => {
-    document.getElementById("question").innerHTML=`<img src="d3.jpg"> <br> 
+    document.getElementById("question").innerHTML=`<img src="photo3.JPG"> <br> 
+    <p> Who is on the Right</p>
+    <form>
+        
+        <!-- Right Abigail equals 1 point -->
+        <input type="checkbox" id="rAbigail" name="rAbigail" value="rAbigail">
+        <label for="rAbigail">Abigail</label> 
+
+        <!-- CORRECT -->
+         <!-- Right Adriyel equals 2 points -->
+        <input type="checkbox" id="rAdriyel" name="rAdriyel" value="rAdriyel">
+        <label for="rAdriyel">Adriyel</label>
+    </form>
+<!-- 5 is the correct total -->
+    <p> Who is on the Left</p>
+    <form>
+        <!-- CORRECT -->
+        <!-- Left Abigail equals 3 points -->
+        <input type="checkbox" id="lAbigail" name="lAbigail" value="lAbigail">
+        <label for="lAbigail">Abigail</label> 
+        <!-- left Adriyel equals 4 points -->
+        <input type="checkbox" id="lAdriyel" name="lAdriyel" value="lAdriyel">
+        <label for="lAdriyel">Adriyel</label>
+    </form>
+<br>
+    <button onclick="checkQuestion(1)">Submit</button>`;
+}
+
+//Question 4 Function
+const question4 = () => {
+    document.getElementById("question").innerHTML=`<img src="photo4.JPG"> <br> 
+    <p> Who is on the Right</p>
+    <form>
+        
+        <!-- Right Abigail equals 1 point -->
+        <input type="checkbox" id="rAbigail" name="rAbigail" value="rAbigail">
+        <label for="rAbigail">Abigail</label> 
+
+        <!-- CORRECT -->
+         <!-- Right Adriyel equals 2 points -->
+        <input type="checkbox" id="rAdriyel" name="rAdriyel" value="rAdriyel">
+        <label for="rAdriyel">Adriyel</label>
+    </form>
+<!-- 5 is the correct total -->
+    <p> Who is on the Left</p>
+    <form>
+        <!-- CORRECT -->
+        <!-- Left Abigail equals 3 points -->
+        <input type="checkbox" id="lAbigail" name="lAbigail" value="lAbigail">
+        <label for="lAbigail">Abigail</label> 
+        <!-- left Adriyel equals 4 points -->
+        <input type="checkbox" id="lAdriyel" name="lAdriyel" value="lAdriyel">
+        <label for="lAdriyel">Adriyel</label>
+    </form>
+<br>
+    <button onclick="checkQuestion(1)">Submit</button>`;
+}
+
+//Question 5 Function
+const question5 = () => {
+    document.getElementById("question").innerHTML=`<img src="photo5.JPG"> <br> 
+    <p> Who is on the Right</p>
+    <form>
+        
+        <!-- Right Abigail equals 1 point -->
+        <input type="checkbox" id="rAbigail" name="rAbigail" value="rAbigail">
+        <label for="rAbigail">Abigail</label> 
+
+        <!-- CORRECT -->
+         <!-- Right Adriyel equals 2 points -->
+        <input type="checkbox" id="rAdriyel" name="rAdriyel" value="rAdriyel">
+        <label for="rAdriyel">Adriyel</label>
+    </form>
+<!-- 5 is the correct total -->
+    <p> Who is on the Left</p>
+    <form>
+        <!-- CORRECT -->
+        <!-- Left Abigail equals 3 points -->
+        <input type="checkbox" id="lAbigail" name="lAbigail" value="lAbigail">
+        <label for="lAbigail">Abigail</label> 
+        <!-- left Adriyel equals 4 points -->
+        <input type="checkbox" id="lAdriyel" name="lAdriyel" value="lAdriyel">
+        <label for="lAdriyel">Adriyel</label>
+    </form>
+<br>
+    <button onclick="checkQuestion(1)">Submit</button>`;
+}
+
+//Question 6 Function
+const question6 = () => {
+    document.getElementById("question").innerHTML=`<img src="photo6.jpg"> <br> 
+    <p> Who is on the Right</p>
+    <form>
+        
+        <!-- Right Abigail equals 1 point -->
+        <input type="checkbox" id="rAbigail" name="rAbigail" value="rAbigail">
+        <label for="rAbigail">Abigail</label> 
+
+        <!-- CORRECT -->
+         <!-- Right Adriyel equals 2 points -->
+        <input type="checkbox" id="rAdriyel" name="rAdriyel" value="rAdriyel">
+        <label for="rAdriyel">Adriyel</label>
+    </form>
+<!-- 5 is the correct total -->
+    <p> Who is on the Left</p>
+    <form>
+        <!-- CORRECT -->
+        <!-- Left Abigail equals 3 points -->
+        <input type="checkbox" id="lAbigail" name="lAbigail" value="lAbigail">
+        <label for="lAbigail">Abigail</label> 
+        <!-- left Adriyel equals 4 points -->
+        <input type="checkbox" id="lAdriyel" name="lAdriyel" value="lAdriyel">
+        <label for="lAdriyel">Adriyel</label>
+    </form>
+<br>
+    <button onclick="checkQuestion(1)">Submit</button>`;
+}
+
+//Question 7 Function
+const question7 = () => {
+    document.getElementById("question").innerHTML=`<img src="photo7.JPG"> <br> 
+    <p> Who is on the Right</p>
+    <form>
+        
+        <!-- Right Abigail equals 1 point -->
+        <input type="checkbox" id="rAbigail" name="rAbigail" value="rAbigail">
+        <label for="rAbigail">Abigail</label> 
+
+        <!-- CORRECT -->
+         <!-- Right Adriyel equals 2 points -->
+        <input type="checkbox" id="rAdriyel" name="rAdriyel" value="rAdriyel">
+        <label for="rAdriyel">Adriyel</label>
+    </form>
+<!-- 5 is the correct total -->
+    <p> Who is on the Left</p>
+    <form>
+        <!-- CORRECT -->
+        <!-- Left Abigail equals 3 points -->
+        <input type="checkbox" id="lAbigail" name="lAbigail" value="lAbigail">
+        <label for="lAbigail">Abigail</label> 
+        <!-- left Adriyel equals 4 points -->
+        <input type="checkbox" id="lAdriyel" name="lAdriyel" value="lAdriyel">
+        <label for="lAdriyel">Adriyel</label>
+    </form>
+<br>
+    <button onclick="checkQuestion(1)">Submit</button>`;
+}
+
+//Question 8 Function
+const question8 = () => {
+    document.getElementById("question").innerHTML=`<img src="photo8.jpg"> <br> 
+    <p> Who is on the Right</p>
+    <form>
+        
+        <!-- Right Abigail equals 1 point -->
+        <input type="checkbox" id="rAbigail" name="rAbigail" value="rAbigail">
+        <label for="rAbigail">Abigail</label> 
+
+        <!-- CORRECT -->
+         <!-- Right Adriyel equals 2 points -->
+        <input type="checkbox" id="rAdriyel" name="rAdriyel" value="rAdriyel">
+        <label for="rAdriyel">Adriyel</label>
+    </form>
+<!-- 5 is the correct total -->
+    <p> Who is on the Left</p>
+    <form>
+        <!-- CORRECT -->
+        <!-- Left Abigail equals 3 points -->
+        <input type="checkbox" id="lAbigail" name="lAbigail" value="lAbigail">
+        <label for="lAbigail">Abigail</label> 
+        <!-- left Adriyel equals 4 points -->
+        <input type="checkbox" id="lAdriyel" name="lAdriyel" value="lAdriyel">
+        <label for="lAdriyel">Adriyel</label>
+    </form>
+<br>
+    <button onclick="checkQuestion(1)">Submit</button>`;
+}
+
+//Question 9 Function
+const question9 = () => {
+    document.getElementById("question").innerHTML=`<img src="photo9.JPG"> <br> 
+    <p> Who is on the Right</p>
+    <form>
+        
+        <!-- Right Abigail equals 1 point -->
+        <input type="checkbox" id="rAbigail" name="rAbigail" value="rAbigail">
+        <label for="rAbigail">Abigail</label> 
+
+        <!-- CORRECT -->
+         <!-- Right Adriyel equals 2 points -->
+        <input type="checkbox" id="rAdriyel" name="rAdriyel" value="rAdriyel">
+        <label for="rAdriyel">Adriyel</label>
+    </form>
+<!-- 5 is the correct total -->
+    <p> Who is on the Left</p>
+    <form>
+        <!-- CORRECT -->
+        <!-- Left Abigail equals 3 points -->
+        <input type="checkbox" id="lAbigail" name="lAbigail" value="lAbigail">
+        <label for="lAbigail">Abigail</label> 
+        <!-- left Adriyel equals 4 points -->
+        <input type="checkbox" id="lAdriyel" name="lAdriyel" value="lAdriyel">
+        <label for="lAdriyel">Adriyel</label>
+    </form>
+<br>
+    <button onclick="checkQuestion(1)">Submit</button>`;
+}
+
+//Question 10 Function
+const question10 = () => {
+    document.getElementById("question").innerHTML=`<img src="photo10.JPG"> <br> 
     <p> Who is on the Right</p>
     <form>
         
