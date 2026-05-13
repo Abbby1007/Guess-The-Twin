@@ -17,12 +17,14 @@ const Test = () =>{
 
 }
 
-
+let question = 0;
 
 let problems = [15];
 let total = 0;
 const questions = () =>{
+        document.getElementById("number").innerHTML = `Question ${question + 1}/10`;
     if(problems.length === 11){
+
        document.getElementById("Test").innerHTML=`STOPPPPPPPPPP`;
 }
     let test = 0;
@@ -47,6 +49,7 @@ let newIndex = index;
         else if(test != 1){
             problems.push(index);
             total +=1;
+            question += 1;
             if(index === 0){
                 question1();
             }
