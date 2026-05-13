@@ -17,19 +17,129 @@ const Test = () =>{
 
 }
 
+
+  
+// let index = Math.floor(Math.random() * 10);
+//     document.getElementById("Test").innerHTML=`${index}`;
+//     while(test != 1){
+
+//  for(let i = 0; i< problems.length; i++){
+//         if(problems[i] === index){
+//             test = 1;
+//         }
+//  }
+// let newIndex = index;
+//     if(test == 1){
+//         while(index === newIndex);{
+//        index = Math.floor(Math.random() * 10);
+//         }
+//         test = 0;
+//     }
+//         if(test != 1){
+//             problems.push(index);
+//             if(index === 0){
+//                 question1();
+//             }
+//             else if(index === 1){
+//                 question2();
+//             }
+//             else if(index === 2){
+//                 question3();
+//             }
+//             else if(index === 3){
+//                 question4();
+//             }
+//             else if(index === 4){
+//                 question5();
+//             }
+//             else if(index === 5){
+//                 question6();
+//             }    
+//             else if(index === 6){
+//                 question7();
+//             }
+//             else if(index === 7){
+//                 question8();
+//             }
+//             else if(index === 8){
+//                 question9();
+//             }
+//             else if(index === 9){
+//                 question10();
+//             }
+//             else{
+//                 document.getElementById("question").innerHTML=`NUMBER ISN"T HERE :(`;   
+//             }
+//         }
+//     }
+
+
 let problems = [15];
+let total = 0;
 const questions = () =>{
+    
     let test = 0;
     const photos = ["d1.jpg","d2.jpg","d3.jpg"];
-    let index = Math.floor(Math.random() * 10);
+ let index = Math.floor(Math.random() * 10);
     document.getElementById("Test").innerHTML=`${index}`;
-        for(let i = 0; i< problems.length; i++){
+    // while(test != 1){
+
+ for(let i = 0; i< problems.length; i++){
         if(problems[i] === index){
             test = 1;
         }
+ }
+let newIndex = index;
+if(total === 10){
+       document.getElementById("Test").innerHTML=`STOPPPPPPPPPP`;
+}
+    if(test == 1){
+        while(index === newIndex){
+ 
+       index = Math.floor(Math.random() * 10);
+            if(index != newIndex){
+                    problems.push(index);
+                            total += 1;
+            if(index === 0){
+                question1();
+            }
+            else if(index === 1){
+                question2();
+            }
+            else if(index === 2){
+                question3();
+            }
+            else if(index === 3){
+                question4();
+            }
+            else if(index === 4){
+                question5();
+            }
+            else if(index === 5){
+                question6();
+            }    
+            else if(index === 6){
+                question7();
+            }
+            else if(index === 7){
+                question8();
+            }
+            else if(index === 8){
+                question9();
+            }
+            else if(index === 9){
+                question10();
+            }
+            else{
+                document.getElementById("question").innerHTML=`NUMBER ISN"T HERE :(`;   
+            }
+            }
+        }
+        
     }
-            if(test != 1){
+        else if(test != 1){
             problems.push(index);
+            total +=1;
             if(index === 0){
                 question1();
             }
@@ -64,6 +174,8 @@ const questions = () =>{
                 document.getElementById("question").innerHTML=`NUMBER ISN"T HERE :(`;   
             }
         }
+    // }
+
 
 
 // Determine if the user is correct
