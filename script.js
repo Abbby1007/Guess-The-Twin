@@ -260,7 +260,8 @@ else if(num === 10){
     }
 //     // contineu button appears
 
-
+document.getElementById("number").innerHTML = `Question ${question-1}/10 <br> Points: ${totalPoints}`;
+ 
 }
 const continueButt = () => {
     // move on to next question, while also claering the checkanswer text
