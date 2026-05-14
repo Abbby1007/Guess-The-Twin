@@ -1,5 +1,5 @@
 img{
-max-width: 40%;
+max-width: 30%;
   height: auto;
 }
 
@@ -11,4 +11,30 @@ body{
 button{
     display: block;
   margin: 0 auto;
+      border-radius: 10px;
+    font-size: 1.5vw;
+}
+
+h1{
+  font-size: 4w;
+}
+
+h3{
+  font-size:1.8vw;
+}
+
+p{
+  font-size: 1.5vw;
+}
+
+div{
+  margin-bottom: 0;
+}
+
+form{
+  font-size: 1.5vw;
+}
+
+a {
+    text-decoration: none;
 }

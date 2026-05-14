@@ -29,18 +29,16 @@ const questions = () =>{
 // }
     // document.getElementById("question").innerHTML = `Congratulations on finishing. You have ${points} points <br> Would you like to tryagain?`;
 if(question == 11){
-    document.getElementById("question").innerHTML = `<h3>Congratulations on finishing. You have ${totalPoints} points <br> Would you like to tryagain?</h3>`;
+    document.getElementById("question").innerHTML = `<h3>Congratulations on finishing. You have ${totalPoints} points <br> Would you like to try again?</h3>`;
 }
 document.getElementById("continue").style.display = `none`;
         document.getElementById("startButt").style.display = `none`;
-        document.getElementById("number").innerHTML = `Question ${question}/10 <br> Points:${totalPoints}`;
+        document.getElementById("number").innerHTML = `Question ${question}/10 <br> Points: ${totalPoints}`;
  
     let test = 0;
     const photos = ["d1.jpg","d2.jpg","d3.jpg"];
     //generate index
  let index = Math.floor(Math.random() * 10);
-    // document.getElementById("Test").innerHTML=`${index} Array values: ${problems}`;
-
     //chekc if numebr is already useds
  for(let i = 0; i< problems.length; i++){
         if(problems[i] === index){
@@ -90,29 +88,6 @@ let newIndex = index;
                 document.getElementById("question").innerHTML=`NUMBER ISN"T HERE :(`;   
             }
         }
-
-
-// Determine if the user is correct
-//     let points = 0;
-// if(document.querySelector("rAbigail").checked){
-//     points += 1;
-// }
-// if(document.querySelector("rAdriyel").checked){
-//     points += 2;
-// }
-// if(document.querySelector("lAbigail").checked){
-//     points += 3;
-// }
-// if(document.querySelector("lAdriyel").checked){
-//     points += 4;
-// }
-
-// if(points === 5){
-// document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
-// }
-// else{
-// document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
-// }
 
 }
 
