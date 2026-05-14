@@ -453,7 +453,7 @@ const question6 = () => {
 
 //Question 7 Function
 const question7 = () => {
-    document.getElementById("question").innerHTML=`<img src="photo7.JPG"> <br> 
+    document.getElementById("question").innerHTML=`<img src="photo7.jpg"> <br> 
     <p> Who is on the Right</p>
     <form>
         
@@ -513,7 +513,7 @@ const question8 = () => {
 
 //Question 9 Function
 const question9 = () => {
-    document.getElementById("question").innerHTML=`<img src="photo9.JPG"> <br> 
+    document.getElementById("question").innerHTML=`<img src="photo9.jpg"> <br> 
     <p> Who is on the Right</p>
     <form>
         
