@@ -17,21 +17,24 @@ const Test = () =>{
 
 }
 
-let question = 0;
+let question = 1;
 
 let problems = [15];
 let total = 0;
 const questions = () =>{
-        document.getElementById("number").innerHTML = `Question ${question + 1}/10`;
-    if(problems.length === 11){
+    // document.getElementById("continue").style.display = `block`;
+//        if(problems.length === 10){
 
-       document.getElementById("Test").innerHTML=`STOPPPPPPPPPP`;
-}
+//        document.getElementById("checkAnswer").innerHTML=`STOPPPPPPPPPP`;
+// }
+        document.getElementById("startButt").style.display = `none`;
+        document.getElementById("number").innerHTML = `Question ${question}/10`;
+ 
     let test = 0;
     const photos = ["d1.jpg","d2.jpg","d3.jpg"];
     //generate index
  let index = Math.floor(Math.random() * 10);
-    document.getElementById("Test").innerHTML=`${index} Array values: ${problems}`;
+    // document.getElementById("Test").innerHTML=`${index} Array values: ${problems}`;
 
     //chekc if numebr is already useds
  for(let i = 0; i< problems.length; i++){
@@ -43,8 +46,6 @@ let newIndex = index;
 
     if(test == 1){
         questions();
-  
-        
     }
         else if(test != 1){
             problems.push(index);
@@ -86,8 +87,6 @@ let newIndex = index;
         }
 
 
-
-
 // Determine if the user is correct
     let points = 0;
 if(document.querySelector("rAbigail").checked){
@@ -104,15 +103,18 @@ if(document.querySelector("lAdriyel").checked){
 }
 
 if(points === 5){
-document.getElementById("Test2").innerHTML = `IS CORRECT`;
+document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
 }
 else{
-document.getElementById("Test2").innerHTML = `IS Wrong`;
+document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
 }
+
 }
 
 
 const checkQuestion = (num) =>{
+document.getElementById("Test").innerHTML = `This was Checked`;
+
     // Determine if the user is correct
     let points = 0;
 if(document.getElementById("rAbigail").checked){
@@ -130,17 +132,26 @@ if(document.getElementById("lAdriyel").checked){
 // check if it is question 1
 if(num === 1){
     if(points === 5){
-        document.getElementById("Test2").innerHTML = `IS CORRECT`;
+        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("submit").style.display = `none`;
     }
     else{
-        document.getElementById("Test2").innerHTML = `Is Wrong`;
+        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("submit").style.display = `none`;
     }
 }
     else{
-        document.getElementById("Test2").innerHTML = `Not a valid Numbers`;
+        document.getElementById("checkAnswer").innerHTML = `Not a valid Numbers`;
     }
-}
+//     // contineu button appears
+// document.getElementById("continue").style.display = `block`;
 
+}
+const continueButt = () => {
+    // move on to next question, while also claering the checkanswer text
+    questions();
+    document.getElementById("checkAnswer").innerHTML = ``;
+}
 //Question 1 Function
 const question1 = () => {
     document.getElementById("question").innerHTML=`<img src="photo1.JPG"> <br> 
@@ -168,7 +179,8 @@ const question1 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button onclick="checkQuestion(1)">Submit</button>`;
+    <button id="submit" onclick="checkQuestion(1)">Submit</button>
+    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
 }
 
 //Question 2 Function
@@ -198,7 +210,9 @@ const question2 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button onclick="checkQuestion(1)">Submit</button>`;
+    <button id="submit" onclick="checkQuestion(1)">Submit</button>
+    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
+
 }
 
 //Question 3 Function
@@ -228,7 +242,8 @@ const question3 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button onclick="checkQuestion(1)">Submit</button>`;
+    <button id="submit" onclick="checkQuestion(1)">Submit</button>
+    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
 }
 
 //Question 4 Function
@@ -258,7 +273,8 @@ const question4 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button onclick="checkQuestion(1)">Submit</button>`;
+    <button id="submit" onclick="checkQuestion(1)">Submit</button>
+    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
 }
 
 //Question 5 Function
@@ -288,7 +304,8 @@ const question5 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button onclick="checkQuestion(1)">Submit</button>`;
+    <button id="submit" onclick="checkQuestion(1)">Submit</button>
+    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
 }
 
 //Question 6 Function
@@ -318,7 +335,8 @@ const question6 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button onclick="checkQuestion(1)">Submit</button>`;
+    <button id="submit" onclick="checkQuestion(1)">Submit</button>
+    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
 }
 
 //Question 7 Function
@@ -348,7 +366,8 @@ const question7 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button onclick="checkQuestion(1)">Submit</button>`;
+    <button id="submit" onclick="checkQuestion(1)">Submit</button>
+    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
 }
 
 //Question 8 Function
@@ -378,7 +397,8 @@ const question8 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button onclick="checkQuestion(1)">Submit</button>`;
+    <button id="submit" onclick="checkQuestion(1)">Submit</button>
+    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
 }
 
 //Question 9 Function
@@ -408,7 +428,8 @@ const question9 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button onclick="checkQuestion(1)">Submit</button>`;
+    <button id="submit" onclick="checkQuestion(1)">Submit</button>
+    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
 }
 
 //Question 10 Function
@@ -438,5 +459,6 @@ const question10 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button onclick="checkQuestion(1)">Submit</button>`;
+    <button id="submit" onclick="checkQuestion(1)">Submit</button>
+    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
 }
