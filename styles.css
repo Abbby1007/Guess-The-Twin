@@ -13,14 +13,22 @@ button{
   margin: 0 auto;
       border-radius: 10px;
     font-size: 1.5vw;
+    background-color:#ffdb8c;
 }
 
+button:hover{
+  background-color:#ffee8c;
+}
 h1{
   font-size: 4w;
 }
 
 h3{
   font-size:1.8vw;
+}
+
+h4{
+  font-size: 1.5vw;
 }
 
 p{
@@ -37,4 +45,12 @@ form{
 
 a {
     text-decoration: none;
+}
+
+#correct{
+  color:green;
+}
+
+#wrong{
+color:red;
 }

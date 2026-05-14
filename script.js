@@ -29,11 +29,15 @@ const questions = () =>{
 // }
     // document.getElementById("question").innerHTML = `Congratulations on finishing. You have ${points} points <br> Would you like to tryagain?`;
 if(question == 11){
-    document.getElementById("question").innerHTML = `<h3>Congratulations on finishing. You have ${totalPoints} points <br> Would you like to try again?</h3>`;
+    document.getElementById("number").innerHTML = `Question 10/10 <br> Points: ${totalPoints}`;
+    document.getElementById("question").innerHTML = `<h3>Congratulations on finishing. You finished with ${totalPoints} points <br> Would you like to try again? <br> <br> <a href="1Page.html"><button>Try Again</button></a></h3>`;
 }
 document.getElementById("continue").style.display = `none`;
         document.getElementById("startButt").style.display = `none`;
-        document.getElementById("number").innerHTML = `Question ${question}/10 <br> Points: ${totalPoints}`;
+        if(question != 11){
+document.getElementById("number").innerHTML = `Question ${question}/10 <br> Points: ${totalPoints}`;
+        }
+        
  
     let test = 0;
     const photos = ["d1.jpg","d2.jpg","d3.jpg"];
@@ -112,13 +116,13 @@ if(document.getElementById("lAdriyel").checked){
  // left Adriyel + Right Abigail = 7 + 1 = 8
 if(num === 1){
     if(points === 8){
-        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="correct">Corect Answers +1 point</p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
         totalPoints += 1;
     }
     else{
-        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="wrong">Wrong Answers :( no point </p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
     }
@@ -126,13 +130,13 @@ if(num === 1){
  // left Adriyel + Right Abigail = 7 + 1 = 8
 else if(num === 2){
     if(points === 8){
-        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="correct">Corect Answers +1 point</p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
         totalPoints += 1;
     }
     else{
-        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="wrong">Wrong Answers :( no point </p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
     }
@@ -140,13 +144,13 @@ else if(num === 2){
 // left Adriyel + Right Abigail = 7 + 1 = 8
 else if(num === 3){
     if(points === 8){
-        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="correct">Corect Answers +1 point</p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
         totalPoints += 1;
     }
     else{
-        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="wrong">Wrong Answers :( no point </p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
     }
@@ -154,13 +158,13 @@ else if(num === 3){
 //Left Abigail and Right ADriyel = 4 + 3 = 7
 else if(num === 4){
     if(points === 7){
-        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="correct">Corect Answers +1 point</p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
         totalPoints += 1;
     }
     else{
-        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="wrong">Wrong Answers :( no point </p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
     }
@@ -168,13 +172,13 @@ else if(num === 4){
 //Left Abigail and Right ADriyel = 4 + 3 = 7
 else if(num === 5){
     if(points === 7){
-        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="correct">Corect Answers +1 point</p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
         totalPoints += 1;
     }
     else{
-        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="wrong">Wrong Answers :( no point </p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
     }
@@ -182,13 +186,13 @@ else if(num === 5){
 // left Adriyel + Right Abigail = 7 + 1 = 8
 else if(num === 6){
     if(points === 8){
-        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="correct">Corect Answers +1 point</p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
         totalPoints += 1;
     }
     else{
-        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="wrong">Wrong Answers :( no point </p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
     }
@@ -196,13 +200,13 @@ else if(num === 6){
 //Left Abigail and Right ADriyel = 4 + 3 = 7
 else if(num === 7){
     if(points === 7){
-        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="correct">Corect Answers +1 point</p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
         totalPoints += 1;
     }
     else{
-        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="wrong">Wrong Answers :( no point </p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
     }
@@ -210,13 +214,13 @@ else if(num === 7){
 // left Adriyel + Right Abigail = 7 + 1 = 8
 else if(num === 8){
     if(points === 8){
-        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="correct">Corect Answers +1 point</p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
         totalPoints += 1;
     }
     else{
-        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="wrong">Wrong Answers :( no point </p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
     }
@@ -224,13 +228,13 @@ else if(num === 8){
 // left Adriyel + Right Abigail = 7 + 1 = 8
 else if(num === 9){
     if(points === 8){
-        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="correct">Corect Answers +1 point</p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
         totalPoints += 1;
     }
     else{
-        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="wrong">Wrong Answers :( no point </p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
     }
@@ -238,13 +242,13 @@ else if(num === 9){
 //Left Abigail and Right ADriyel = 4 + 3 = 7
 else if(num === 10){
     if(points === 7){
-        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="correct">Corect Answers +1 point</p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
         totalPoints += 1;
     }
     else{
-        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("checkAnswer").innerHTML = `<p id="wrong">Wrong Answers :( no point </p>`;
         document.getElementById("submit").style.display = `none`;
         document.getElementById("continue").style.display = `block`;
     }
