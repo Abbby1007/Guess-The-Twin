@@ -6,5 +6,8 @@ How Guess The Twin: "Guess The Twin" was made with HTML, javascript and CSS
 
 Struggle with GUESS the TWIN: For this project I wanted to have the quiz questions be radomized. I wanted it to be randomxied so that when users retook the quiz, they wouldn't just memorize the answers based on the order of the questions. When making the radomization process I had to figure out how to tell if a question was already used. I was able to get through this from trial and error from testing different methods.
 
+Below is a screenshot of one of the questions:
+<img width="1415" height="970" alt="Screenshot 2026-05-14 203012" src="https://github.com/user-attachments/assets/c6f11a00-6e8e-48fb-9402-5a076dd92206" />
+
 
 
