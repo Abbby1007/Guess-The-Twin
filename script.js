@@ -18,17 +18,22 @@ const Test = () =>{
 }
 
 let question = 1;
-
+let totalPoints = 0;
 let problems = [15];
 let total = 0;
 const questions = () =>{
-    // document.getElementById("continue").style.display = `block`;
-//        if(problems.length === 10){
+
+    //    if(problems.length === 10){
 
 //        document.getElementById("checkAnswer").innerHTML=`STOPPPPPPPPPP`;
 // }
+    // document.getElementById("question").innerHTML = `Congratulations on finishing. You have ${points} points <br> Would you like to tryagain?`;
+if(question == 11){
+    document.getElementById("question").innerHTML = `<h3>Congratulations on finishing. You have ${totalPoints} points <br> Would you like to tryagain?</h3>`;
+}
+document.getElementById("continue").style.display = `none`;
         document.getElementById("startButt").style.display = `none`;
-        document.getElementById("number").innerHTML = `Question ${question}/10`;
+        document.getElementById("number").innerHTML = `Question ${question}/10 <br> Points:${totalPoints}`;
  
     let test = 0;
     const photos = ["d1.jpg","d2.jpg","d3.jpg"];
@@ -88,32 +93,31 @@ let newIndex = index;
 
 
 // Determine if the user is correct
-    let points = 0;
-if(document.querySelector("rAbigail").checked){
-    points += 1;
-}
-if(document.querySelector("rAdriyel").checked){
-    points += 2;
-}
-if(document.querySelector("lAbigail").checked){
-    points += 3;
-}
-if(document.querySelector("lAdriyel").checked){
-    points += 4;
-}
+//     let points = 0;
+// if(document.querySelector("rAbigail").checked){
+//     points += 1;
+// }
+// if(document.querySelector("rAdriyel").checked){
+//     points += 2;
+// }
+// if(document.querySelector("lAbigail").checked){
+//     points += 3;
+// }
+// if(document.querySelector("lAdriyel").checked){
+//     points += 4;
+// }
 
-if(points === 5){
-document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
-}
-else{
-document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
-}
+// if(points === 5){
+// document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+// }
+// else{
+// document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+// }
 
 }
 
 
 const checkQuestion = (num) =>{
-document.getElementById("Test").innerHTML = `This was Checked`;
 
     // Determine if the user is correct
     let points = 0;
@@ -121,36 +125,170 @@ if(document.getElementById("rAbigail").checked){
     points += 1;
 }
 if(document.getElementById("rAdriyel").checked){
-    points += 2;
-}
-if(document.getElementById("lAbigail").checked){
     points += 3;
 }
-if(document.getElementById("lAdriyel").checked){
+if(document.getElementById("lAbigail").checked){
     points += 4;
 }
+if(document.getElementById("lAdriyel").checked){
+    points += 7;
+}
 // check if it is question 1
+ // left Adriyel + Right Abigail = 7 + 1 = 8
 if(num === 1){
-    if(points === 5){
+    if(points === 8){
         document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
         document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+        totalPoints += 1;
     }
     else{
         document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
         document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+    }
+}
+ // left Adriyel + Right Abigail = 7 + 1 = 8
+else if(num === 2){
+    if(points === 8){
+        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+        totalPoints += 1;
+    }
+    else{
+        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+    }
+}
+// left Adriyel + Right Abigail = 7 + 1 = 8
+else if(num === 3){
+    if(points === 8){
+        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+        totalPoints += 1;
+    }
+    else{
+        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+    }
+}
+//Left Abigail and Right ADriyel = 4 + 3 = 7
+else if(num === 4){
+    if(points === 7){
+        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+        totalPoints += 1;
+    }
+    else{
+        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+    }
+}
+//Left Abigail and Right ADriyel = 4 + 3 = 7
+else if(num === 5){
+    if(points === 7){
+        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+        totalPoints += 1;
+    }
+    else{
+        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+    }
+}
+// left Adriyel + Right Abigail = 7 + 1 = 8
+else if(num === 6){
+    if(points === 8){
+        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+        totalPoints += 1;
+    }
+    else{
+        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+    }
+}
+//Left Abigail and Right ADriyel = 4 + 3 = 7
+else if(num === 7){
+    if(points === 7){
+        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+        totalPoints += 1;
+    }
+    else{
+        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+    }
+}
+// left Adriyel + Right Abigail = 7 + 1 = 8
+else if(num === 8){
+    if(points === 8){
+        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+        totalPoints += 1;
+    }
+    else{
+        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+    }
+}
+// left Adriyel + Right Abigail = 7 + 1 = 8
+else if(num === 9){
+    if(points === 8){
+        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+        totalPoints += 1;
+    }
+    else{
+        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+    }
+}
+//Left Abigail and Right ADriyel = 4 + 3 = 7
+else if(num === 10){
+    if(points === 7){
+        document.getElementById("checkAnswer").innerHTML = `IS CORRECT +1 point`;
+        document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
+        totalPoints += 1;
+    }
+    else{
+        document.getElementById("checkAnswer").innerHTML = `IS WRONG no points :(`;
+        document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
     }
 }
     else{
         document.getElementById("checkAnswer").innerHTML = `Not a valid Numbers`;
+                document.getElementById("submit").style.display = `none`;
+        document.getElementById("continue").style.display = `block`;
     }
 //     // contineu button appears
-// document.getElementById("continue").style.display = `block`;
+
 
 }
 const continueButt = () => {
     // move on to next question, while also claering the checkanswer text
+    document.getElementById("checkAnswer").innerHTML = ` `;
+    document.getElementById("continue").style.display = `none`;
     questions();
-    document.getElementById("checkAnswer").innerHTML = ``;
+
 }
 //Question 1 Function
 const question1 = () => {
@@ -179,8 +317,7 @@ const question1 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button id="submit" onclick="checkQuestion(1)">Submit</button>
-    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
+    <button id="submit" onclick="checkQuestion(1)">Submit</button>`;
 }
 
 //Question 2 Function
@@ -210,8 +347,7 @@ const question2 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button id="submit" onclick="checkQuestion(1)">Submit</button>
-    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
+    <button id="submit" onclick="checkQuestion(2)">Submit</button>`;
 
 }
 
@@ -242,8 +378,7 @@ const question3 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button id="submit" onclick="checkQuestion(1)">Submit</button>
-    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
+    <button id="submit" onclick="checkQuestion(3)">Submit</button>`;
 }
 
 //Question 4 Function
@@ -273,8 +408,7 @@ const question4 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button id="submit" onclick="checkQuestion(1)">Submit</button>
-    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
+    <button id="submit" onclick="checkQuestion(4)">Submit</button>`;
 }
 
 //Question 5 Function
@@ -304,8 +438,7 @@ const question5 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button id="submit" onclick="checkQuestion(1)">Submit</button>
-    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
+    <button id="submit" onclick="checkQuestion(5)">Submit</button>`;
 }
 
 //Question 6 Function
@@ -335,8 +468,7 @@ const question6 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button id="submit" onclick="checkQuestion(1)">Submit</button>
-    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
+    <button id="submit" onclick="checkQuestion(6)">Submit</button>`;
 }
 
 //Question 7 Function
@@ -366,8 +498,7 @@ const question7 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button id="submit" onclick="checkQuestion(1)">Submit</button>
-    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
+    <button id="submit" onclick="checkQuestion(7)">Submit</button>`;
 }
 
 //Question 8 Function
@@ -397,8 +528,7 @@ const question8 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button id="submit" onclick="checkQuestion(1)">Submit</button>
-    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
+    <button id="submit" onclick="checkQuestion(8)">Submit</button>`;
 }
 
 //Question 9 Function
@@ -428,8 +558,7 @@ const question9 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button id="submit" onclick="checkQuestion(1)">Submit</button>
-    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
+    <button id="submit" onclick="checkQuestion(9)">Submit</button>`;
 }
 
 //Question 10 Function
@@ -459,6 +588,5 @@ const question10 = () => {
         <label for="lAdriyel">Adriyel</label>
     </form>
 <br>
-    <button id="submit" onclick="checkQuestion(1)">Submit</button>
-    <button id="continue" onclick="continueButt()" >CONTINUE</button>`;
+    <button id="submit" onclick="checkQuestion(10)">Submit</button>`;
 }
